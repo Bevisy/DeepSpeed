@@ -1,3 +1,34 @@
+## DeepSpeed 现已原生支持 NPU ！
+
+无需 deepspeed_npu 插件，直接安装，直接使用，建议使用新版 DeepSpeed。
+
+1. 首先卸载旧版 DeepSpeed 以及 deepspeed_npu（如没有可跳过此步骤）。
+    ```shell
+    pip3 uninstall deepspeed_npu
+    pip3 uninstall deepspeed
+    ```
+
+2. 安装最新版本 DeepSpeed：
+   
+    方式一：
+    ```shell
+    pip3 install deepspeed
+    ```
+
+    方式二：
+    ```shell
+    git clone https://github.com/microsoft/DeepSpeed.git
+    cd DeepSpeed
+    pip3 install -e ./
+    ```
+
+3. 使用方式与原生一致，具体可参考官方文档与示例。  
+    官方文档：http://www.deepspeed.ai/  
+    官方代码仓：https://github.com/microsoft/DeepSpeed   
+    官方示例仓：https://github.com/microsoft/DeepSpeedExamples
+
+
+#### 以下为原文:
 ## deepspeed_npu: Ascend NPU 适配 deepspeed 插件
 
 通过 deepspeed_npu，你可以在 Ascend910 芯片上使用 deepspeed，并基于 deepspeed 进行开发。目前，deepspeed_npu 主要支持以下特性:
